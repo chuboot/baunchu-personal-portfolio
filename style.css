@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rasa:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --black-blue: #2f332f;
+  --green-light: #dbf8df;
+  --light-grey: #646464;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "PT Sans", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #eee;
+  padding: 1.5rem 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black-blue);
+  z-index: 10;
+}
+
+nav {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+nav a {
+  margin-right: 2rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #d8d8d8;
+}
+
+nav a:hover,
+.active {
+  color: var(--green-light);
+}
+.logo {
+  color: var(--green-light);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: 1px solid var(--green-light);
+  padding: 0.1rem 1rem;
+}
+
+input {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--green-light);
+  background: none;
+  font-size: 0.8rem;
+  font-family: "PT Sans", sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+section {
+  min-height: 100vh;
+  padding: 9rem 7%;
+}
+
+.welcome-section {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* flex-direction: column; */
+}
+
+.col-left {
+  width: 50%;
+}
+
+.welcome-section h1,
+.contact h1,
+.projects h1 {
+  font-size: 4rem;
+  font-family: "Rasa", sans-serif;
+  font-weight: 500;
+  margin: 2.5rem 0;
+}
+
+.welcome-section h4,
+.contact h4,
+.projects h4 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--light-grey);
+  font-weight: 400;
+}
+.welcome-section p,
+.contact p {
+  font-size: 1.2rem;
+  color: var(--light-grey);
+  line-height: 1.8;
+  margin: 1.5rem 0;
+  font-weight: 400;
+}
+.welcome-section span {
+  color: var(--light-grey);
+}
+
+.btn {
+  background-color: var(--black-blue);
+  padding: 0.4rem 3rem;
+  color: var(--green-light);
+  text-decoration: none;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+}
+
+.container-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.project-tile {
+  width: 48%;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.project-tile img {
+  width: 100%;
+}
+
+.project-tile:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0) 0%,
+    rgba(166, 233, 60, 0.65) 100%
+  );
+}
+
+.project-tile .head-card {
+  position: absolute;
+  color: #fff;
+  padding: 3rem;
+  z-index: 8;
+}
+
+.project-tile .head-card h4 {
+  color: #dcdcdc;
+}
+
+.project-tile .head-card h2 {
+  font-size: 2.2rem;
+  font-family: "Rasa", sans-serif;
+  font-weight: 400;
+  margin-top: 1.8rem;
+}
+.project-tile .head-card a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #dcdcdc;
+}
+.project-tile .head-card a:hover {
+  color: var(--green-light);
+}
+
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sosial-media {
+  display: flex;
+}
+
+.sosial-media i {
+  color: var(--black-blue);
+  margin-right: 1rem;
+  font-size: 2.5rem;
+}
+.sosial-media i:hover {
+  color: red;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-blue);
+  color: var(--green-light);
+  padding: 2rem 0;
+}
+
+footer i {
+  color: red;
+}
