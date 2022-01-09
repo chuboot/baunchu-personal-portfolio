@@ -13,6 +13,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.2s linear;
 }
 
 html {
@@ -70,6 +71,10 @@ input {
 
 section {
   padding: 9rem 7%;
+}
+
+section#contact {
+  background-color: #dbf8df;
 }
 
 .welcome-section {
@@ -134,6 +139,11 @@ section {
   letter-spacing: 0.2rem;
 }
 
+.btn:hover {
+  background-color: var(--green-light);
+  color: var(--black-blue);
+}
+
 .container-projects {
   display: flex;
   flex-wrap: wrap;
@@ -145,11 +155,15 @@ section {
   position: relative;
 }
 
+.project-tile:hover {
+  transform: translateY(20px);
+}
+
 .project-tile img {
   width: 100%;
 }
 
-.project-tile:after {
+.project-tile:before {
   position: absolute;
   content: "";
   height: 100%;
@@ -163,11 +177,31 @@ section {
   );
 }
 
+.project-tile:hover::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 27, 23, 0.65) 100%,
+    rgba(255, 0, 0, 0) 0%
+  );
+}
+
 .project-tile .head-card {
   position: absolute;
   color: #fff;
   padding: 3rem;
   z-index: 8;
+}
+
+.project-tile:hover .head-card {
+  animation: fadein 3s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .project-tile .head-card h4 {
@@ -177,16 +211,19 @@ section {
 .project-tile .head-card h2 {
   font-size: 2.2rem;
   font-family: "Rasa", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   margin-top: 1.8rem;
+  margin-bottom: 1.2rem;
 }
 .project-tile .head-card a {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: #dcdcdc;
+  opacity: 0;
 }
-.project-tile .head-card a:hover {
-  color: var(--green-light);
+.project-tile:hover .head-card a {
+  color: #aaa9a9;
+  opacity: 1;
 }
 
 .container-center {
@@ -217,7 +254,7 @@ footer {
 }
 
 footer i {
-  color: red;
+  color: rgb(199, 64, 64);
 }
 
 @media only screen and (max-width: 768px) {
