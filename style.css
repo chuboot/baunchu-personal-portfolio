@@ -3,7 +3,9 @@
 
 :root {
   --black-blue: #2f332f;
-  --green-light: #dbf8df;
+  /* --green-light: #dbf8df; */
+  --green-light: #6b8e23;
+
   --light-grey: #646464;
 }
 
@@ -69,13 +71,12 @@ input {
 section {
   min-height: 100vh;
   padding: 9rem 7%;
+  border: 1px solid pink;
 }
 
 .welcome-section {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  /* flex-direction: column; */
 }
 
 .col-left {
@@ -85,19 +86,20 @@ section {
 .welcome-section h1,
 .contact h1,
 .projects h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: "Rasa", sans-serif;
   font-weight: 500;
-  margin: 2.5rem 0;
+  line-height: 1.2;
+  margin: 2rem 0;
 }
 
 .welcome-section h4,
 .contact h4,
 .projects h4 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
-  color: var(--light-grey);
+  color: #aaa9a9;
   font-weight: 400;
 }
 .welcome-section p,
@@ -105,11 +107,11 @@ section {
   font-size: 1.2rem;
   color: var(--light-grey);
   line-height: 1.8;
-  margin: 1.5rem 0;
+  margin: 1.3rem 0;
   font-weight: 400;
 }
 .welcome-section span {
-  color: var(--light-grey);
+  color: olivedrab;
 }
 
 .btn {
@@ -192,7 +194,7 @@ section {
   font-size: 2.5rem;
 }
 .sosial-media i:hover {
-  color: red;
+  color: #6b8e23;
 }
 footer {
   display: flex;
@@ -200,9 +202,53 @@ footer {
   align-items: center;
   background-color: var(--black-blue);
   color: var(--green-light);
-  padding: 2rem 0;
+  padding: 2rem 7%;
 }
 
 footer i {
   color: red;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    justify-content: center;
+  }
+  section {
+    min-height: 100vh;
+    padding: 7rem 7%;
+    border: 1px solid pink;
+  }
+
+  nav,
+  input {
+    display: none;
+  }
+
+  .welcome-section {
+    flex-direction: column-reverse;
+  }
+  .col-left {
+    width: 100%;
+  }
+
+  .col-right {
+    width: 100%;
+  }
+  .col-right img {
+    width: 100%;
+  }
+  .welcome-section h1,
+  .contact h1,
+  .projects h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 1.2rem 0;
+  }
+
+  .project-tile {
+    width: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+  }
 }
