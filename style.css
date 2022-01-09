@@ -69,18 +69,29 @@ input {
 }
 
 section {
-  min-height: 100vh;
   padding: 9rem 7%;
-  border: 1px solid pink;
 }
 
 .welcome-section {
+  padding-top: 8rem;
+  padding-bottom: 1rem;
+  padding-right: 7%;
+  padding-left: 7%;
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
 }
 
 .col-left {
   width: 50%;
+}
+
+.col-right {
+  display: flex;
+  justify-content: end;
+}
+.col-right img {
+  width: 95%;
 }
 
 .welcome-section h1,
@@ -214,9 +225,7 @@ footer i {
     justify-content: center;
   }
   section {
-    min-height: 100vh;
     padding: 7rem 7%;
-    border: 1px solid pink;
   }
 
   nav,
@@ -233,6 +242,7 @@ footer i {
 
   .col-right {
     width: 100%;
+    margin-bottom: 1rem;
   }
   .col-right img {
     width: 100%;
