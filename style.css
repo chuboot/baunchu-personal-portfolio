@@ -39,8 +39,11 @@ header {
 }
 
 nav {
+  position: fixed;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  top: 0;
+  padding: 2rem 0;
 }
 
 nav a {
@@ -237,7 +240,7 @@ section#contact {
   opacity: 0;
 }
 .project-tile:hover .head-card a {
-  color: #aaa9a9;
+  color: var(--green-light);
   opacity: 1;
 }
 
@@ -280,15 +283,20 @@ footer i {
     padding: 7rem 7%;
   }
 
+  #click:checked ~ .menu-bar i:before {
+    content: "\f00d";
+  }
+
   nav {
     position: fixed;
     padding: 4rem 0;
     top: 10%;
     left: -100%;
-    background-color: brown;
+    background-color: var(--black-blue);
     height: 100vh;
     width: 100%;
     text-align: center;
+    transition: all 0.5s;
   }
 
   #click:checked ~ nav {
